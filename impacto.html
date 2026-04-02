@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto e Doações | Instituto ADIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000830',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
+    <!-- Navegação -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.jpg" alt="Logo Instituto ADIT" class="w-12 h-12 rounded-full border-2 border-primary shadow-md group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-primary leading-none">Instituto ADIT</span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Assembleia de Deus do Itapoã</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-semibold text-accent hover:text-secondary transition-colors">Início</a>
+                <a href="sobre.html" class="font-semibold text-accent hover:text-secondary transition-colors">Sobre</a>
+                <a href="projetos.html" class="font-semibold text-accent hover:text-secondary transition-colors">Projetos</a>
+                <a href="impacto.html" class="font-semibold text-accent hover:text-secondary transition-colors border-b-2 border-secondary">Impacto</a>
+                <a href="contato.html" class="font-semibold text-accent hover:text-secondary transition-colors">Contato</a>
+                <a href="#doar" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">Quero Ajudar</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-bold text-slate-600">Início</a>
+                <a href="sobre.html" class="font-bold text-slate-600">Sobre</a>
+                <a href="projetos.html" class="font-bold text-slate-600">Projetos</a>
+                <a href="impacto.html" class="font-bold text-primary">Impacto</a>
+                <a href="contato.html" class="font-bold text-slate-600">Contato</a>
+                <a href="#doar" class="bg-secondary text-white text-center py-3 rounded-xl font-bold">Quero Ajudar</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h1 class="text-5xl font-black text-primary mb-6">Nosso Impacto Social</h1>
+                <p class="text-xl text-slate-600 leading-relaxed">O Instituto ADIT vem gerando resultados concretos por meio de suas ações, alcançando pessoas e fortalecendo famílias.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-24">
+                <div class="bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100 reveal">
+                    <h2 class="text-3xl font-black text-primary mb-10">Resultados Concretos</h2>
+                    <ul class="space-y-8">
+                        <li class="flex items-start gap-6">
+                            <div class="w-4 h-4 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-xl text-slate-600 font-semibold">Apoio direto a famílias em situação de vulnerabilidade</p>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <div class="w-4 h-4 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-xl text-slate-600 font-semibold">Realização de ações sociais com alcance comunitário</p>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <div class="w-4 h-4 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-xl text-slate-600 font-semibold">Promoção de atividades educativas e de desenvolvimento</p>
+                        </li>
+                        <li class="flex items-start gap-6">
+                            <div class="w-4 h-4 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                            <p class="text-xl text-slate-600 font-semibold">Fortalecimento de vínculos sociais e comunitários</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-primary p-12 rounded-[3rem] text-white shadow-2xl flex flex-col justify-center reveal">
+                    <p class="text-3xl font-black italic leading-tight mb-10">
+                        "O foco do Instituto não está apenas nos números, mas na transformação real de vidas, criando oportunidades e restaurando dignidade."
+                    </p>
+                    <p class="text-xl text-slate-400 font-bold">Mesmo em fase inicial de expansão, o Instituto já demonstra seu compromisso com a transformação social.</p>
+                </div>
+            </div>
+
+            <!-- Seção de Doação -->
+            <section id="doar" class="bg-white p-16 rounded-[4rem] shadow-2xl text-center reveal">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-5xl font-black text-primary mb-8 leading-tight">Ajude a transformar vidas</h2>
+                    <p class="text-2xl text-slate-600 mb-16 leading-relaxed">
+                        Sua contribuição permite que o Instituto ADIT continue expandindo suas ações e alcançando mais famílias no Itapoã.
+                    </p>
+                    
+                    <div class="bg-slate-50 p-12 rounded-[3rem] border-4 border-dashed border-secondary inline-block mb-16 shadow-inner">
+                        <p class="text-sm font-black text-slate-500 uppercase tracking-[0.3em] mb-4">Faça um PIX agora</p>
+                        <p class="text-4xl md:text-6xl font-black text-primary mb-4 tracking-tighter">62.461.888/0001-17</p>
+                        <p class="text-2xl font-black text-secondary">CNPJ Instituto ADIT</p>
+                    </div>
+
+                    <div class="mt-10">
+                        <h3 class="text-3xl font-black text-primary mb-6">Seja um Voluntário</h3>
+                        <p class="text-xl text-slate-600 mb-10 leading-relaxed">Estamos abrindo oportunidades para voluntários em diversas áreas: apoio em eventos, projetos educativos e distribuição de alimentos.</p>
+                        <a href="contato.html" class="bg-primary text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-opacity-90 transition-all shadow-2xl hover:-translate-y-1 inline-block">Quero ser voluntário</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4 font-bold text-slate-400">CNPJ: 62.461.888/0001-17</p>
+            <p>&copy; 2026 Instituto ADIT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

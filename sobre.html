@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Instituto ADIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000830',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
+    <!-- Navegação -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.jpg" alt="Logo Instituto ADIT" class="w-12 h-12 rounded-full border-2 border-primary shadow-md group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-primary leading-none">Instituto ADIT</span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Assembleia de Deus do Itapoã</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-semibold text-accent hover:text-secondary transition-colors">Início</a>
+                <a href="sobre.html" class="font-semibold text-accent hover:text-secondary transition-colors border-b-2 border-secondary">Sobre</a>
+                <a href="projetos.html" class="font-semibold text-accent hover:text-secondary transition-colors">Projetos</a>
+                <a href="impacto.html" class="font-semibold text-accent hover:text-secondary transition-colors">Impacto</a>
+                <a href="contato.html" class="font-semibold text-accent hover:text-secondary transition-colors">Contato</a>
+                <a href="impacto.html#doar" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">Quero Ajudar</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-bold text-primary">Início</a>
+                <a href="sobre.html" class="font-bold text-slate-600">Sobre</a>
+                <a href="projetos.html" class="font-bold text-slate-600">Projetos</a>
+                <a href="impacto.html" class="font-bold text-slate-600">Impacto</a>
+                <a href="contato.html" class="font-bold text-slate-600">Contato</a>
+                <a href="impacto.html#doar" class="bg-secondary text-white text-center py-3 rounded-xl font-bold">Quero Ajudar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="pt-40 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 reveal">Sobre o <span class="text-secondary">Instituto</span></h1>
+            <p class="text-xl text-blue-100 max-w-3xl leading-relaxed reveal">
+                Conheça a história, a liderança e o propósito que movem o braço social do Campo ADIT.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="container mx-auto px-6">
+            <!-- História e Propósito -->
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+                <div class="reveal">
+                    <h2 class="text-4xl font-black text-primary mb-8 border-l-8 border-secondary pl-8">Nossa História</h2>
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            O Instituto ADIT é uma organização sem fins lucrativos dedicada à promoção da transformação social por meio de ações nas áreas de assistência social, educação e desenvolvimento comunitário.
+                        </p>
+                        <p>
+                            Nascido como o braço social do Campo ADIT, o Instituto surgiu da necessidade de formalizar e expandir as ações de compaixão que já eram realizadas. Com o CNPJ próprio, a instituição ganhou a capacidade técnica e legal de firmar parcerias com empresas, órgãos públicos e outras organizações, garantindo total transparência e profissionalismo.
+                        </p>
+                        <p class="font-bold text-primary italic">
+                            "Organizar a compaixão, estruturar a solidariedade e expandir o alcance da Igreja além das quatro paredes."
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100 reveal">
+                    <h3 class="text-2xl font-black text-primary mb-8">Por que um Instituto?</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Formalização e Transparência</h4>
+                                <p class="text-slate-500 text-sm">Prestação de contas anual e gestão profissional de recursos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Parcerias Estratégicas</h4>
+                                <p class="text-slate-500 text-sm">Capacidade de receber doações de empresas e convênios públicos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center shrink-0 mt-1">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">Continuidade e Impacto</h4>
+                                <p class="text-slate-500 text-sm">Projetos estruturados para gerar transformação a longo prazo.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Diretoria Completa -->
+            <section class="mb-32">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl font-black text-primary mb-4">Diretoria do Instituto ADIT</h2>
+                    <p class="text-lg text-slate-600">Liderança comprometida com a excelência e o serviço ao próximo.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Presidência -->
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-secondary reveal">
+                            <h4 class="text-primary font-black text-lg">Presidente</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Elton Mendes</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-secondary reveal">
+                            <h4 class="text-primary font-black text-lg">Vice-Presidente</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Odair José</p>
+                        </div>
+                    </div>
+
+                    <!-- Secretaria -->
+                    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">Secretário</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Fagner Silva</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">1ª Vice-Secretária</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Lisandra</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">2º Vice-Secretário</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Mailson</p>
+                        </div>
+                    </div>
+
+                    <!-- Tesouraria e Comissão de Contas -->
+                    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">Tesoureira</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Helaine</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">Vice-Tesoureira</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Maria Alice</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">Comissão de Contas</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Hozias</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-primary reveal">
+                            <h4 class="text-primary font-black text-lg">Comissão de Contas</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Raiane</p>
+                        </div>
+                    </div>
+
+                    <!-- Equipes de Apoio -->
+                    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-accent reveal">
+                            <h4 class="text-primary font-black text-lg">Eventos</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Adriana</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-accent reveal">
+                            <h4 class="text-primary font-black text-lg">Eventos</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Alexandre</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-accent reveal">
+                            <h4 class="text-primary font-black text-lg">Eventos</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Evanilde</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-accent reveal">
+                            <h4 class="text-primary font-black text-lg">Eventos</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Regis</p>
+                        </div>
+                    </div>
+
+                    <!-- Divulgação e Mídia -->
+                    <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-secondary reveal">
+                            <h4 class="text-primary font-black text-lg">Divulgação</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Jessica</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-secondary reveal">
+                            <h4 class="text-primary font-black text-lg">Divulgação</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Janaina</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl text-center border-b-4 border-accent reveal">
+                            <h4 class="text-primary font-black text-lg">Mídia</h4>
+                            <p class="text-slate-500 text-sm font-bold mt-2 uppercase tracking-wider">Marcele</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Missão, Visão e Valores -->
+            <div class="grid md:grid-cols-3 gap-8 reveal">
+                <div class="bg-primary p-12 rounded-[3rem] text-white">
+                    <h3 class="text-2xl font-black mb-6 text-secondary">Missão</h3>
+                    <p class="text-blue-100 leading-relaxed">
+                        Promover a dignidade humana e a transformação social através de ações práticas de assistência, educação e acolhimento espiritual.
+                    </p>
+                </div>
+                <div class="bg-white p-12 rounded-[3rem] shadow-xl border border-slate-100">
+                    <h3 class="text-2xl font-black mb-6 text-primary">Visão</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Ser referência em gestão social e impacto comunitário no Distrito Federal, unindo fé e profissionalismo para restaurar vidas.
+                    </p>
+                </div>
+                <div class="bg-secondary p-12 rounded-[3rem] text-white">
+                    <h3 class="text-2xl font-black mb-6 text-primary">Valores</h3>
+                    <ul class="text-white/90 space-y-2 font-bold">
+                        <li>• Fé em Ação</li>
+                        <li>• Transparência</li>
+                        <li>• Compaixão</li>
+                        <li>• Excelência</li>
+                        <li>• Responsabilidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10 border-b border-white/10 pb-16 mb-10">
+                <div class="flex items-center gap-4">
+                    <img src="logo.jpg" alt="Logo Instituto ADIT" class="w-16 h-16 rounded-full border-2 border-white/20">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black">Instituto ADIT</span>
+                        <span class="text-xs text-slate-400">Transformando vidas através da ação social</span>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <a href="index.html" class="font-bold hover:text-secondary transition-colors">Início</a>
+                    <a href="sobre.html" class="font-bold hover:text-secondary transition-colors">Sobre</a>
+                    <a href="projetos.html" class="font-bold hover:text-secondary transition-colors">Projetos</a>
+                    <a href="impacto.html" class="font-bold hover:text-secondary transition-colors">Impacto</a>
+                    <a href="contato.html" class="font-bold hover:text-secondary transition-colors">Contato</a>
+                </div>
+            </div>
+            <div class="text-center text-slate-500 text-sm">
+                <p class="mb-4 font-bold text-slate-400">CNPJ: 62.461.888/0001-17</p>
+                <p>&copy; 2026 Instituto ADIT. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

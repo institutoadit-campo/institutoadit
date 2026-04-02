@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Instituto ADIT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000830',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
+    <!-- Navegação -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.jpg" alt="Logo Instituto ADIT" class="w-12 h-12 rounded-full border-2 border-primary shadow-md group-hover:scale-105 transition-transform">
+                <div class="flex flex-col">
+                    <span class="text-xl font-black text-primary leading-none">Instituto ADIT</span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Assembleia de Deus do Itapoã</span>
+                </div>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="font-semibold text-accent hover:text-secondary transition-colors">Início</a>
+                <a href="sobre.html" class="font-semibold text-accent hover:text-secondary transition-colors">Sobre</a>
+                <a href="projetos.html" class="font-semibold text-accent hover:text-secondary transition-colors border-b-2 border-secondary">Projetos</a>
+                <a href="impacto.html" class="font-semibold text-accent hover:text-secondary transition-colors">Impacto</a>
+                <a href="contato.html" class="font-semibold text-accent hover:text-secondary transition-colors">Contato</a>
+                <a href="impacto.html#doar" class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl">Quero Ajudar</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-primary focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="index.html" class="font-bold text-primary">Início</a>
+                <a href="sobre.html" class="font-bold text-slate-600">Sobre</a>
+                <a href="projetos.html" class="font-bold text-slate-600">Projetos</a>
+                <a href="impacto.html" class="font-bold text-slate-600">Impacto</a>
+                <a href="contato.html" class="font-bold text-slate-600">Contato</a>
+                <a href="impacto.html#doar" class="bg-secondary text-white text-center py-3 rounded-xl font-bold">Quero Ajudar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="pt-40 pb-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 reveal">Nossos <span class="text-secondary">Projetos</span></h1>
+            <p class="text-xl text-blue-100 max-w-3xl leading-relaxed reveal">
+                Transformação prática e impacto duradouro através de ações estruturadas para atender as necessidades reais da nossa comunidade.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-24">
+        <div class="container mx-auto px-6">
+            
+            <!-- Projeto Mão Amiga (Destaque) -->
+            <section class="mb-32 reveal">
+                <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100">
+                    <div class="bg-primary p-12 text-white">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+                            <h2 class="text-5xl font-black">PROJETO MÃO AMIGA</h2>
+                            <div class="bg-accent text-primary px-8 py-3 rounded-2xl font-black text-2xl shadow-2xl animate-pulse">
+                                05 DE JULHO DE 2026 ÀS 08:30
+                            </div>
+                        </div>
+                        <p class="text-2xl font-bold text-secondary mb-8">Atendimento gratuito para a comunidade</p>
+                        <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border-l-8 border-accent italic text-2xl leading-relaxed mb-8">
+                            "Não deixe de fazer o bem àqueles que precisarem, sempre que isso estiver ao seu alcance." <br>
+                            <span class="text-accent font-black not-italic text-lg">— Provérbios 3:27</span>
+                        </div>
+                        <p class="text-blue-100 text-lg leading-relaxed">
+                            Oferecer atendimento humanizado e gratuito à população carente, por meio de orientações jurídicas, psicológicas e médicas básicas, com o apoio de faculdades parceiras, voluntários profissionais e estagiários supervisionados.
+                        </p>
+                    </div>
+                    
+                    <div class="p-12">
+                        <h3 class="text-2xl font-black text-primary mb-12 text-center uppercase tracking-widest">SERVIÇOS OFERECIDOS NO DIA</h3>
+                        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                            <!-- Médico -->
+                            <div class="bg-white p-8 rounded-3xl shadow-xl border-b-4 border-secondary reveal overflow-hidden flex flex-col">
+                                <div class="mb-6 -mx-8 -mt-8 h-64 overflow-hidden">
+                                    <img src="medica.png" alt="Atendimento Médico" class="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-4 mx-auto -mt-12 relative z-10 border-4 border-white">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                                </div>
+                                <h4 class="text-primary font-black text-xl mb-2 text-center">Atendimento Médico</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed text-center">Consultas e orientações com profissionais qualificados.</p>
+                            </div>
+
+                            <!-- Enfermagem -->
+                            <div class="text-center group reveal">
+                                <div class="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform border-2 border-secondary/20">
+                                    <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <h4 class="text-primary font-black text-xl mb-2">Enfermagem</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed">Aferição de pressão, glicemia e primeiros socorros.</p>
+                            </div>
+
+                            <!-- Psicologia -->
+                            <div class="bg-white p-8 rounded-3xl shadow-xl border-b-4 border-secondary reveal overflow-hidden flex flex-col">
+                                <div class="mb-6 -mx-8 -mt-8 h-64 overflow-hidden">
+                                    <img src="psicologa.png" alt="Atendimento Psicológico" class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-4 mx-auto -mt-12 relative z-10 border-4 border-white">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </div>
+                                <h4 class="text-primary font-black text-xl mb-2 text-center">Psicologia</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed text-center">Acolhimento emocional e orientação psicológica.</p>
+                            </div>
+
+                            <!-- Jurídico -->
+                            <div class="text-center group reveal">
+                                <div class="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform border-2 border-secondary/20">
+                                    <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                                </div>
+                                <h4 class="text-primary font-black text-xl mb-2">Jurídico</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed">Aconselhamento para dúvidas e questões legais.</p>
+                            </div>
+
+                            <!-- Recreação -->
+                            <div class="text-center group reveal">
+                                <div class="w-24 h-24 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform border-2 border-secondary/20">
+                                    <svg class="w-12 h-12 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <h4 class="text-primary font-black text-xl mb-2">Recreação</h4>
+                                <p class="text-slate-500 text-sm leading-relaxed">Atividades lúdicas e diversão para as crianças.</p>
+                            </div>
+                        </div>
+                        <div class="mt-16 p-8 bg-slate-50 rounded-3xl border border-slate-100 text-center reveal">
+                            <p class="text-slate-600 font-bold">📍 Local: QD 378 CJ. Q LT. 02 ITAPOÃ/DF</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Escola Bíblica de Férias -->
+            <section class="mb-32 reveal">
+                <div class="bg-white rounded-[4rem] shadow-2xl overflow-hidden border border-slate-100">
+                    <div class="bg-secondary p-12 text-white">
+                        <h2 class="text-5xl font-black mb-6 uppercase tracking-tighter">Escola Bíblica de Férias</h2>
+                        <p class="text-2xl font-bold text-primary mb-8">Uma semana especial para as crianças da comunidade</p>
+                        <p class="text-white/90 text-lg leading-relaxed">
+                            Realizar uma semana especial durante o período de férias escolares com atividades bíblicas, recreativas, educativas e sociais para crianças da comunidade, incluindo aquelas que não frequentam a igreja regularmente.
+                        </p>
+                    </div>
+                    <div class="p-12 grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-black text-primary mb-8 border-l-8 border-secondary pl-6">O que vai ter:</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 text-slate-600 font-semibold">
+                                    <div class="w-2 h-2 bg-secondary rounded-full"></div> Aulas bíblicas com linguagem infantil.
+                                </li>
+                                <li class="flex items-center gap-4 text-slate-600 font-semibold">
+                                    <div class="w-2 h-2 bg-secondary rounded-full"></div> Distribuição de lanche, brindes e material didático.
+                                </li>
+                                <li class="flex items-center gap-4 text-slate-600 font-semibold">
+                                    <div class="w-2 h-2 bg-secondary rounded-full"></div> Orientações de higiene e cuidado com o corpo.
+                                </li>
+                                <li class="flex items-center gap-4 text-slate-600 font-semibold">
+                                    <div class="w-2 h-2 bg-secondary rounded-full"></div> Atividades de respeito ao próximo.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                            <h3 class="text-2xl font-black text-primary mb-6">Como o Instituto entra:</h3>
+                            <p class="text-slate-600 leading-relaxed mb-6">
+                                Coordena o planejamento geral (inscrição, equipe, estrutura), capta doações para lanche e material, e firma parcerias com empresas e voluntários.
+                            </p>
+                            <div class="flex items-center gap-4 text-secondary font-black">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Período de Férias Escolares</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ações Contínuas -->
+            <h2 class="text-4xl font-black text-primary mb-12 border-l-8 border-accent pl-8 reveal">Ações Sociais Contínuas</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-all reveal">
+                    <h3 class="text-xl font-black text-primary mb-4">Projeto de Futebol</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Esporte e lazer para crianças da comunidade, promovendo saúde e disciplina.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-all reveal">
+                    <h3 class="text-xl font-black text-primary mb-4">Doação de Cestas Básicas</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Combate à insegurança alimentar com recursos essenciais.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-all reveal">
+                    <h3 class="text-xl font-black text-primary mb-4">Brinquedos para Crianças</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Campanhas especiais para levar alegria aos pequenos.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-all reveal">
+                    <h3 class="text-xl font-black text-primary mb-4">Reforço Escolar</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Apoio pedagógico para crianças e jovens da comunidade.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:-translate-y-2 transition-all reveal">
+                    <h3 class="text-xl font-black text-primary mb-4">Evangelismo e Apoio em Hospitais</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Acolhimento espiritual e distribuição de lanches em hospitais do DF.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10 border-b border-white/10 pb-16 mb-10">
+                <div class="flex items-center gap-4">
+                    <img src="logo.jpg" alt="Logo Instituto ADIT" class="w-16 h-16 rounded-full border-2 border-white/20">
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black">Instituto ADIT</span>
+                        <span class="text-xs text-slate-400">Transformando vidas através da ação social</span>
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <a href="index.html" class="font-bold hover:text-secondary transition-colors">Início</a>
+                    <a href="sobre.html" class="font-bold hover:text-secondary transition-colors">Sobre</a>
+                    <a href="projetos.html" class="font-bold hover:text-secondary transition-colors">Projetos</a>
+                    <a href="impacto.html" class="font-bold hover:text-secondary transition-colors">Impacto</a>
+                    <a href="contato.html" class="font-bold hover:text-secondary transition-colors">Contato</a>
+                </div>
+            </div>
+            <div class="text-center text-slate-500 text-sm">
+                <p class="mb-4 font-bold text-slate-400">CNPJ: 62.461.888/0001-17</p>
+                <p>&copy; 2026 Instituto ADIT. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
